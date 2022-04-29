@@ -1,0 +1,31 @@
+.mensaje{
+	border: 2px solid yellow;
+	font-size: xx-large;
+	padding: 10px;
+	font-weight: bold;
+	background-color: white;
+	margin-left: 0.4em;
+	margin-right: 0.4em;
+}
+.uno{
+	border: 2px solid black;
+	background-color: #9999FF;
+	margin-left: 4em;
+	margin-right: 4em;
+	margin-top: 3em;
+
+}
+.dos{
+	margin-left: 4em;
+	margin-right: 4em;
+}
+.dos{
+	background-color: #CE8845	
+}
+.comentario{
+	font-family: sans-serif;
+	border-bottom: 2px solid green;
+	margin: 10px;
+	font-size: 10px;
+	color: white;
+}

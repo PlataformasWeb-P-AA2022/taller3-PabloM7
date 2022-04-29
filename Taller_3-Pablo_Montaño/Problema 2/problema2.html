@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Problema 2</title>
+	<link rel="stylesheet" href="estilos/estilos.css" type="text/css" />
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<!-- Funcion para llamar a datepicker -->
+	<script>
+		$(function () {
+			$("#fecha").datepicker();
+		});
+	</script>
+</head>
+<body>
+	<h2>Ingrese sus datos:</h2>
+	<div class="columns">
+		<div class="column1">
+			<!--Columna izquierda donde se solicitara al usuario que ingrese sus datos-->
+			<div>
+				<p id="nombre">Nombre:</p>
+				<input id="nombre_presentar" type="text">
+				<p id="apellido">Apellido:</p>
+				<input id="apellido_presentar" type="text">
+				<p id="fecha">Fecha:</p>
+				<input id="fecha_presentar" type="date">
+				<!--El boton presentara los mensajes cuando se clikee-->
+				<button type="submit" onclick="presentar()">Mostrar Informacion</button>
+			</div>
+		</div>
+		<!--Columna 2 en donde se presentan los datos ingresados en la columna 1-->
+		<div class="column2">
+			<p id="mensajeFinal"></p>
+			<h2 id="info_n"></h2>
+			<h2 id="info_a"></h2>
+			<h2 id="info_f"></h2>
+		</div>
+	</div>
+</body>
+<!--Funcion para obtener los datos ingresados en la columna 1 y presentarlos en la segunda, ademas de mostrarlos en la consola 
+tambien-->
+<script>
+	function presentar(){
+		console.log(document.getElementById("nombre_presentar").value)
+		console.log(document.getElementById("apellido_presentar").value)
+		console.log(document.getElementById("fecha_presentar").value)
+		document.getElementById("mensajeFinal").append("mensaje final")
+		document.getElementById("info_n").append(document.getElementById("nombre_presentar").value)
+		document.getElementById("info_a").append(document.getElementById("apellido_presentar").value)
+		document.getElementById("info_f").append(document.getElementById("fecha_presentar").value)
+	}
+</script>
+</html>
